@@ -1,0 +1,154 @@
+<template>
+  <div id="btn-group" class="mx-auto w-75 mt-2">
+    <v-btn class="bg-green" @click="print"> Print </v-btn>
+  </div>
+  <div class="d-flex flex-column w-75 mx-auto" id="print-area">
+    <img src="@/assets/logo.png" alt="" class="mx-auto" style="width: 10%" />
+    <br />
+    <h1>Printing Layout</h1>
+    <p class="text-justify">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi!
+      Ea in consequuntur ipsam. Accusamus quisquam id magni quaerat vero! Ut
+      aliquid beatae quod quo eligendi quaerat, asperiores ullam quia. Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Tenetur facere
+      voluptatum eos obcaecati omnis temporibus accusamus distinctio, quaerat
+      vitae delectus tempora voluptate quisquam fuga magni quia cupiditate!
+      Nostrum, facere ratione? Lorem ipsum, dolor sit amet consectetur
+      adipisicing elit. Soluta, autem maiores. Veniam, vitae quos iusto rerum
+      quas omnis adipisci nobis, architecto at voluptas quaerat id facilis natus
+      quisquam distinctio corporis.
+    </p>
+    <br />
+    <!-- <template v-if="users.length > 0">
+      <div v-for="user in users" :key="user.id">
+        <p>Name: {{ user.first_name }} {{ user.last_name }}</p>
+        <p>Address: {{ user.address }}</p>
+        <p>Contact Number: {{ user.contact_no }}</p>
+      </div>
+    </template> -->
+
+    <template v-if="users.length > 0">
+      <div>
+        <v-table>
+          <tr>
+            <td>CS Form</td>
+          </tr>
+          <tr>
+            <td>Revision 2018</td>
+          </tr>
+          <tr>
+            <td class="text-center">
+              <h1>PERSONAL DATA SHEET</h1>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>WARNING:</b> Any misrepresentation made in the Personal Data
+              Sheet and the Work Experience Sheet shall cause the filing of
+              administrative/criminal case/s against the person concerned.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              READ THE ATTACHED GUIDE TO FILLING OUT THE PERSONAL DATA SHEET
+              (PDS) BEFORE ACCOMPLISHING THE PDS FORM.
+            </td>
+          </tr>
+          <tr>
+            <td colspan="10">
+              Print legibly. Tick appropriate boxes ( ) and use separate sheet
+              if necessary. Indicate N/A if not applicable.
+              <b>DO NOT ABBREVIATE.</b>
+            </td>
+            <td colspan="1">1. CS ID No.</td>
+            <td colspan="3">(Do not fill up. For CSC use only)</td>
+          </tr>
+
+          <tr></tr>
+          <tr>
+            <td class="bg-grey" colspan="14">I. PERSONAL INFORMATION</td>
+          </tr>
+          <tr>
+            <td>SURNAME</td>
+          </tr>
+          <tr>
+            <td>FIRST NAME</td>
+          </tr>
+          <tr>
+            <td>MIDDLE NAME</td>
+          </tr>
+          <tr>
+            <td class="bg-grey">II. FAMILY BACKGROUND</td>
+          </tr>
+        </v-table>
+      </div>
+    </template>
+
+    <div class="page-break"></div>
+    <template v-if="users.length > 0">
+      <v-table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Contact Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="user in users" :key="user.id">
+            <td>{{ user.id }}</td>
+            <td>{{ user.first_name }}</td>
+            <td>{{ user.last_name }}</td>
+            <td>{{ user.address }}</td>
+            <td>{{ user.contact_no }}</td>
+          </tr>
+        </tbody>
+      </v-table>
+    </template>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      users: [],
+    };
+  },
+  created() {
+    this.getUsers();
+  },
+  methods: {
+    async getUsers() {
+      let res = await fetch("http://localhost:3000/users.json");
+      res = await res.json();
+      this.users = res;
+      console.log("users=>", this.users);
+    },
+    print() {
+      if (window) window.print();
+    },
+  },
+};
+</script>
+
+<style>
+.page-break {
+  page-break-after: always;
+}
+
+@media print {
+  #print-area {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  #btn-group {
+    display: none !important;
+  }
+  @page {
+    size: letter;
+  }
+}
+</style>

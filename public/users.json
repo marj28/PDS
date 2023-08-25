@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "first_name": "John",
+        "last_name": "Doe",
+        "address": "Brgy. Apokon, Tagum City",
+        "contact_no": "+639092831292"
+    },
+    {
+        "id": 2,
+        "first_name": "John",
+        "last_name": "Wick",
+        "address": "Brgy. Excommunicado, Tagum City",
+        "contact_no": "+6390912345678"
+    },
+    {
+        "id": 3,
+        "first_name": "John",
+        "last_name": "Cena",
+        "address": "Bollywood, India",
+        "contact_no": "+63909456789"
+    },
+    {
+        "id": 4,
+        "first_name": "Tom",
+        "last_name": "Cruise",
+        "address": "Brgy. San Miguel, Tagum City",
+        "contact_no": "+639092831292"
+    },
+    {
+        "id": 5,
+        "first_name": "Vin",
+        "last_name": "Diesel",
+        "address": "Brgy. Moon, Tagum City",
+        "contact_no": "+639025645679"
+    },
+    {
+        "id": 6,
+        "first_name": "Dolph",
+        "last_name": "Lundgren",
+        "address": "Brgy. Apokon, Tagum City",
+        "contact_no": "+639092831292"
+    },
+    {
+        "id": 7,
+        "first_name": "Bruce",
+        "last_name": "Willis",
+        "address": "Brgy. Excommunicado, Tagum City",
+        "contact_no": "+6390912345678"
+    },
+    {
+        "id": 8,
+        "first_name": "Arnold",
+        "last_name": "Terminator",
+        "address": "Bollywood, India",
+        "contact_no": "+63909456789"
+    },
+    {
+        "id": 9,
+        "first_name": "Slyvester",
+        "last_name": "Stallone",
+        "address": "Brgy. San Miguel, Tagum City",
+        "contact_no": "+639092831292"
+    },
+    {
+        "id": 10,
+        "first_name": "Keanu",
+        "last_name": "Reeves",
+        "address": "Brgy. Moon, Tagum City",
+        "contact_no": "+639025645679"
+    },
+    {
+        "id": 11,
+        "first_name": "Jet",
+        "last_name": "Lee",
+        "address": "Brgy. Apokon, Tagum City",
+        "contact_no": "+639092831292"
+    },
+    {
+        "id": 12,
+        "first_name": "Dwayne",
+        "last_name": "Johnsons",
+        "address": "Brgy. Excommunicado, Tagum City",
+        "contact_no": "+6390912345678"
+    },
+    {
+        "id": 13,
+        "first_name": "Van",
+        "last_name": "Damme",
+        "address": "Bollywood, India",
+        "contact_no": "+63909456789"
+    },
+    {
+        "id": 14,
+        "first_name": "Jason",
+        "last_name": "Momoa",
+        "address": "Brgy. San Miguel, Tagum City",
+        "contact_no": "+639092831292"
+    },
+    {
+        "id": 15,
+        "first_name": "Jason",
+        "last_name": "Statham",
+        "address": "Brgy. Moon, Tagum City",
+        "contact_no": "+639025645679"
+    }
+]
