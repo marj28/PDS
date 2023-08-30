@@ -750,12 +750,54 @@
           </td>
         </tr>
         <tr>
-          <td colspan="8">
-            41. REFERENCES (Person not related by consanguinity or affinity to
-            applicant /appointee)
+          <td colspan="8" class="number">
+            41. REFERENCES
+            <span class="red"
+              >(Person not related by consanguinity or affinity to applicant
+              /appointee)</span
+            >
           </td>
-          <td colspan="2" rowspan="6"><div class="box"></div> </td>
+          <td colspan="2" rowspan="6"><div class="box"></div></td>
         </tr>
+        <tr class="numberCenter">
+          <td colspan="4">NAME</td>
+          <td colspan="3">ADDRESS</td>
+          <td colspan="1">TEL NO.</td>
+        </tr>
+        <tr v-for="index in 3" :key="'empty-' + index">
+          <td colspan="4">&nbsp;</td>
+          <td colspan="3">&nbsp;</td>
+          <td colspan="1">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="8" class="number">
+            42. I declare under oath that I have personally accomplished this
+            Personal Data Sheet which is a true, correct and complete statement
+            pursuant to the provisions of pertinent laws, rules and regulations
+            of the Republic of the Philippines. I authorize the agency
+            head/authorized representative to verify/validate the contents
+            stated herein. I agree that any misrepresentation made in this
+            document and its attachments shall cause the filing of
+            administrative/criminal case/s against me.
+          </td>
+        </tr>
+        <v-table class="boxed-table">
+          <tr>
+            <td colspan="4" class="dark">
+              Government Issued ID (i.e.Passport, GSIS, SSS, PRC, Driver's
+              License, etc.) PLEASE INDICATE ID Number and Date of Issuance
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" class="dark">Government Issued ID:</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="dark">ID/License/Passport No.:</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="dark">Date/Place of Issuance:</td>
+          </tr>
+        </v-table>
       </v-table>
     </div>
 
@@ -824,6 +866,11 @@ td {
 .number {
   background-color: rgb(210, 210, 210);
   /* text-align: center; */
+  text-align: justify;
+}
+.numberCenter {
+  background-color: rgb(210, 210, 210);
+  text-align: center;
 }
 .margin {
   margin-top: -25px;
@@ -832,6 +879,15 @@ td {
   width: 20px;
   height: 20px;
   background-color: #000;
+}
+.boxed-table {
+  border: 2px solid #555; /* Adjust the color as needed */
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.dark {
+  padding: 8px;
 }
 @media print {
   #print-area {
